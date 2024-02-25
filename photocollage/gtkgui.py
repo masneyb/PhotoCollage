@@ -168,9 +168,9 @@ class PhotoCollageWindow(Gtk.Window):
             def __init__(self):
                 self.border_w = 0.01
                 self.border_c = "black"
-                self.out_w = 800
-                self.out_h = 600
-                self.quality = QUALITY_FAST
+                self.out_w = 3756
+                self.out_h = 3262
+                self.quality = QUALITY_BEST
 
         self.opts = Options()
 
