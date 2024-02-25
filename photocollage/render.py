@@ -39,7 +39,7 @@ QUALITIES = {
     QUALITY_FAST: {'str': _("Standard (nearest neighbor; quicker)"),
                    'filter': PIL.Image.NEAREST},
     QUALITY_BEST: {'str': _("Best (antialiasing; slower)"),
-                   'filter': PIL.Image.ANTIALIAS},
+                   'filter': PIL.Image.LANCZOS},
 }
 
 
