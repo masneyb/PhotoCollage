@@ -246,6 +246,8 @@ class PhotoCollageWindow(Gtk.Window):
 
         self.img_preview = ImagePreviewArea(self)
         self.img_preview.set_size_request(600, 400)
+        #self.img_preview.set_size_request(2540, 1302)
+        #self.img_preview.set_size_request(1900, 942)
         self.img_preview.connect("drag-data-received", self.on_drag)
         self.img_preview.drag_dest_set(Gtk.DestDefaults.ALL, [],
                                        Gdk.DragAction.COPY)
@@ -320,6 +322,7 @@ class PhotoCollageWindow(Gtk.Window):
 
         w = self.img_preview.get_allocation().width
         h = self.img_preview.get_allocation().height
+        print(f"WIDTH={w}, HEIGHT={h}")
         collage.page.scale_to_fit(w, h)
 
         # Display a "please wait" dialog and do the job.
@@ -855,6 +858,7 @@ def main():
     win = PhotoCollageWindow()
     win.connect("delete-event", Gtk.main_quit)
     win.show_all()
+    win.maximize()
 
     # If arguments are given, treat them as input images
     if len(sys.argv) > 1:
